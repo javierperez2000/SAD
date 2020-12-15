@@ -8,6 +8,7 @@ import os
 # Declaración de variables de colores
 fcian = "\033[3;46m" # Fondo cian + negrita
 fblanco = "\033[4;47m" # Fondo blanco + subrayado
+frojo = "\033[4;41m" # Fondo rojo + subrayado
 nnegro = "\033[1;30m" # Color negro en negrita
 nverde = "\033[1;32m" # Color verde en negrita.
 nmorado = "\033[1;35m" # Color morado en negrita.
@@ -21,7 +22,7 @@ def menu():
     print(nnegro+fcian+"Selecciona una opción:"+reset)
     print("\t1 - Resumen "+nverde+"MD5"+reset+" de una"+nverde+" cadena"+reset)
     print("\t2 - Resumen "+nrojo+"MD5"+reset+" de un"+nrojo+" fichero"+reset)
-    print("\t3 - Resumen "+nazul+"SAH1"+reset+" de una"+nazul+" cadena"+reset)
+    print("\t3 - Resumen "+nazul+"SHA1"+reset+" de una"+nazul+" cadena"+reset)
     print("\t4 - Resumen "+nmorado+"SHA1"+reset+" de un"+nmorado+" fichero"+reset)
     print("\t0 - Salir")
 
@@ -37,8 +38,7 @@ def cadenamd5():
 # Definición de una función que se ejecutará al elegir la opción 2
 def ficheromd5():
     # Primero pintamos el siguiente texto.
-    print("Ficheros del directorio actual:")
-    print("")
+    print(nnegro+frojo+"Ficheros del directorio actual:"+reset)
     # Con ayuda de la librería 'os' mostramos los ficheros que tenemos, en este caso, en el directorio donde
     # estamos trabajando.
     diractual = os.getcwd()
@@ -74,8 +74,7 @@ def cadenasha1():
 
 def ficherosha1():
     # Primero pintamos el siguiente texto.
-    print("Ficheros del directorio actual:")
-    print("")
+    print(nnegro+frojo+"Ficheros del directorio actual:"+reset)
     # Con ayuda de la librería 'os' mostramos los ficheros que tenemos, en este caso, en el directorio donde
     # estamos trabajando.
     diractual = os.getcwd()
