@@ -1,3 +1,4 @@
+# Corrección
 # Importación de la librería para generar las funciones Hash.
 import hashlib
 # Importación de una librería que me permite hacer un sleep o pausa del script de los segundos indicados.
